@@ -1,8 +1,4 @@
 
--- Anas Bin Rashid (22I-0907)
--- Muhammad Hasnain Akhtar (22I-1241)
--- CS-4A Database Systems Assignment 02
-
 create database dbassignment02
 use dbassignment02
 
@@ -121,32 +117,6 @@ insert into player values (40, 'Mitchell Starc', 'Bowler', 'Peshawar Zalmi')
 select *
 from player
 
--- insertions into playerdata (loaded csv file)
-
-insert into playerdata values (21, 'Faf Du Plessis', 'Batsman', 'Islamabad United') 
-insert into playerdata values (22, 'AB De villiers', 'Batsman', 'Lahore Qalandars') 
-insert into playerdata values (23, 'James Vince', 'Batsman', 'Multan Sultans') 
-insert into playerdata values (24, 'Rilee Rossouw', 'Batsman', 'Multan Sultans') 
-insert into playerdata values (25, 'Jason Roy', 'Batsman', 'Quetta Gladiators') 
-insert into playerdata values (26, 'Joe Root', 'Batsman', 'Peshawar Zalmi') 
-insert into playerdata values (27, 'Dale Steyn', 'Bowler', 'Islamabad United') 
-insert into playerdata values (28, 'Sunil Narine', 'Bowler', 'Lahore Qalandars') 
-insert into playerdata values (29, 'Pat Cummins', 'Bowler', 'Islamabad United') 
-insert into playerdata values (30, 'Kagiso Rabada', 'Bowler', 'Multan Sultans') 
-insert into playerdata values (31, 'Anrich Nortje', 'Bowler', 'Quetta Gladiators') 
-insert into playerdata values (32, 'Trent Boult', 'Bowler', 'Karachi Kings') 
-insert into playerdata values (33, 'Jimmy Neesham', 'All-Rounder', 'Islamabad United') 
-insert into playerdata values (34, 'Kieron Pollard', 'All-Rounder', 'Karachi Kings') 
-insert into playerdata values (35, 'David Willey', 'All-Rounder', 'Multan Sultans') 
-insert into playerdata values (36, 'Cameron Green', 'All-Rounder', 'Lahore Qalandars') 
-insert into playerdata values (37, 'Naveen Ul Haq', 'All-Rounder', 'Peshawar Zalmi') 
-insert into playerdata values (38, 'Muhammad Nabi', 'All-Rounder', 'Quetta Gladiators') 
-insert into playerdata values (39, 'Quinton De Kock', 'Batsman', 'Quetta Gladiators') 
-insert into playerdata values (40, 'Mitchell Starc', 'Bowler', 'Peshawar Zalmi') 
-
-select *
-from playerdata
-
 -- insertions into team
 
 insert into team values (1, 'Karachi Kings', 'National Stadium', 2, 3) 
@@ -182,73 +152,6 @@ where teamname = 'Quetta Gladiators'
 
 select *
 from team
-
--- insertions into teamdata (loaded csv file)
-
-select *
-from teamdata
-
-alter table teamdata
-add teamid numeric (3) 
-
-alter table teamdata
-add numberoflosses numeric (3)
-
-update teamdata
-set Number_of_Wins = 3
-where teamdata.Name = 'Karachi Kings'
-update teamdata
-set teamdata.numberoflosses = 3
-where teamdata.Name = 'Karachi Kings'
-update teamdata
-set teamdata.numberoflosses = 5
-where teamdata.Name = 'Lahore Qalandars'
-update teamdata
-set teamdata.Number_of_Wins = 1
-where teamdata.Name = 'Lahore Qalandars'
-update teamdata
-set teamdata.numberoflosses = 2
-where teamdata.Name = 'Islamabad United'
-update teamdata
-set teamdata.Number_of_Wins = 6
-where teamdata.Name = 'Islamabad United'
-update teamdata
-set teamdata.numberoflosses = 2
-where teamdata.Name = 'Peshawar Zalmi'
-update teamdata
-set teamdata.Number_of_Wins = 5
-where teamdata.Name = 'Peshawar Zalmi'
-update teamdata
-set teamdata.numberoflosses = 4
-where teamdata.Name = 'Multan Sultans'
-update teamdata
-set teamdata.Number_of_Wins = 3
-where teamdata.Name = 'Multan Sultans'
-update teamdata
-set teamdata.numberoflosses = 4
-where teamdata.Name = 'Quetta Gladiators'
-update teamdata
-set teamdata.Number_of_Wins = 2
-where teamdata.Name = 'Quetta Gladiators'
-
-update teamdata
-set teamdata.teamid = 1
-where teamdata.Name = 'Karachi Kings'
-update teamdata
-set teamdata.teamid = 2
-where teamdata.Name = 'Lahore Qalandars'
-update teamdata
-set teamdata.teamid = 3
-where teamdata.Name = 'Islamabad United'
-update teamdata
-set teamdata.teamid = 4
-where teamdata.Name = 'Peshawar Zalmi'
-update teamdata
-set teamdata.teamid = 5
-where teamdata.Name = 'Quetta Gladiators'
-update teamdata
-set teamdata.teamid = 6
-where teamdata.Name = 'Multan Sultans'
 
 -- insertion into stadium
 
